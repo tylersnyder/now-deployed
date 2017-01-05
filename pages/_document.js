@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
           }
 
           a {
-            color: #5ce6cd;
+            color: #bd10e0;
             text-decoration: none;
           }
 
