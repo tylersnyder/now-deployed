@@ -13,7 +13,7 @@
   "scripts": {
     "build": "next build",
     "start": "next start",
-    "dev": "NOW_API_KEY=c3OaKHb4oFH7s6dPvwxkoUIB next",
+    "dev": "next",
     "deploy": "now -e NOW_API_KEY=@now_api_key --alias"
   }
 }
