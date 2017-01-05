@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "View all my deployments on Zeit",
   "main": "index.js",
-  "author": "Pranay Prakash <pranay.gp@gmail.com>",
+  "author": "Tyler Snyder <tylersnyder@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "es6-promise": "^4.0.5",
     "isomorphic-fetch": "^2.2.1",
     "moment": "^2.17.1",
-    "next": "^1.2.3"
+    "next": "2.0.0-beta.13"
   },
   "scripts": {
     "build": "next build",
     "start": "next start",
-    "dev": "next"
+    "dev": "NOW_API_KEY=c3OaKHb4oFH7s6dPvwxkoUIB next",
+    "deploy": "now -e NOW_API_KEY=@now_api_key --alias"
   }
 }
