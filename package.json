@@ -1,5 +1,5 @@
 {
-  "name": "moss-deploys",
+  "name": "now-deployed",
   "version": "1.0.0",
   "description": "View all my deployments on Zeit",
   "main": "index.js",
