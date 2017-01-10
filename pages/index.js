@@ -5,7 +5,7 @@ import moment from 'moment'
 
 require('isomorphic-fetch')
 
-const sanitizeCreatedDate = d => Object.assign({}, d, { created: Number(d.created) })
+const sanitizeCreatedDate = deployment => Object.assign({}, deployment, { created: Number(deployment.created) })
 const sortByMostRecent = (a, b) => b.created - a.created
 
 class Index extends Component {
@@ -16,8 +16,8 @@ class Index extends Component {
         'authorization': `Bearer ${process.env.NOW_API_KEY}`,
         'cache-control': 'no-cache'
       })
-  }).then(r => r.json())
-    .then(j => j.deployments) : { deployments: [] }
+  }).then(result => result.json())
+    .then(json => json.deployments) : { deployments: [] }
 
     return {
       deployments: deployments.map(sanitizeCreatedDate)
@@ -32,10 +32,10 @@ class Index extends Component {
       <h1 className="title">▲ Deployments</h1>
       <ol className="list">
       {
-        deployments.map(d => {
-          return <li key={d.uid}>
-            <Link href={`https://${d.url}`}><a>{d.name}</a></Link>
-            <span className="date">{moment.unix(d.created/1000).fromNow()}</span>
+        deployments.map(deployment => {
+          return <li key={deployment.uid}>
+            <Link href={`https://${deployment.url}`}><a>{deployment.name}</a></Link>
+            <span className="date">{moment.unix(deployment.created/1000).fromNow()}</span>
           </li>
         })
       }
