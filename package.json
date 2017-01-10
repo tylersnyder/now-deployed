@@ -15,5 +15,8 @@
     "start": "next start",
     "dev": "next",
     "deploy": "now -e NOW_API_KEY=@now_api_key --alias"
+  },
+  "devDependencies": {
+    "now": "^1.0.0"
   }
 }
