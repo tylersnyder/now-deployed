@@ -1,2 +1,2 @@
 # now-deployed
-Automagicly list your ▲ZEIT now deployments – hosted on now!
+A simple web app to automatigally list your ▲ZEIT now deployments - https://now-deployed.now.sh/
